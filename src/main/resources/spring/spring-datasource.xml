@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="${jdbc.datasource.driverClassName}" />
+		<property name="username" value="${jdbc.datasource.username}" />
+		<property name="password" value="${jdbc.datasource.password}" />
+		<property name="url" value="${jdbc.datasource.url}" />
+		<property name="validationQuery" value="${jdbc.datasource.validationQuery}" />
+		<property name="initialSize" value="${jdbc.datasource.initialSize}" />
+		<property name="minIdle" value="${jdbc.datasource.minIdle}" />
+		<property name="maxIdle" value="${jdbc.datasource.maxIdle}" />
+		<property name="maxTotal" value="${jdbc.datasource.maxTotal}" />
+		<property name="testOnBorrow" value="${jdbc.datasource.testOnBorrow}" />
+		<property name="testWhileIdle" value="${jdbc.datasource.testWhileIdle}" />
+		<property name="timeBetweenEvictionRunsMillis" value="${jdbc.datasource.timeBetweenEvictionRunsMillis}" />
+	</bean>
+	
+</beans>
